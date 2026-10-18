@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace AstrX\Controller;
+namespace AstrX\Tipline\Controller;
 
 use AstrX\Captcha\CaptchaService;
 use AstrX\Config\Config;
@@ -13,10 +13,11 @@ use AstrX\Result\DiagnosticsCollector;
 use AstrX\Result\Result;
 use AstrX\Session\FlashBag;
 use AstrX\Session\PrgHandler;
-use AstrX\Site\DefaultTemplateContext;
+use AstrX\Template\TemplateVars;
 use AstrX\Tipline\TiplineCrypto;
 use AstrX\Tipline\TiplineRepository;
 use PDO;
+use AstrX\Kernel\AbstractController;
 
 /**
  * Public anonymous tip line (/tipline).
@@ -39,7 +40,7 @@ final class TiplineController extends AbstractController
 
     public function __construct(
         DiagnosticsCollector                    $collector,
-        private readonly DefaultTemplateContext $ctx,
+        private readonly TemplateVars $ctx,
         private readonly Request                $request,
         private readonly PDO                    $pdo,
         private readonly Translator             $t,
