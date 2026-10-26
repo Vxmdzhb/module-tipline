@@ -2,6 +2,8 @@
 
 Encrypted anonymous tip line with an offline-decrypted inbox — the **Tipline** module of [AstrX](https://github.com/Vxmdzhb/astrx).
 
+![The anonymous tip line](docs/screenshot.png)
+
 - Module key: `tipline` (switch it on in the site's `resources/config/Modules.config.php`)
 - Pages: `admin_tipline`, `tipline`
 - Requires: `astrx/cms`, `astrx/framework`, `astrx/library`
