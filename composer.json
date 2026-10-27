@@ -1,6 +1,7 @@
 {
     "name": "astrx/module-tipline",
     "description": "Encrypted anonymous tip line with an offline-decrypted inbox",
+    "license": "LicenseRef-DoWhatever",
     "type": "astrx-module",
     "keywords": [
         "astrx",
